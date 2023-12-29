@@ -1,0 +1,169 @@
+body {
+    padding-top: 0;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.title {
+    font-size: 50px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.heading {
+    font-size: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.explanation {
+    font-size: 12px;
+    max-width: 620px;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: #ababab;
+    font-weight: 300;
+    text-align: center;
+}
+
+#background-line {
+    background-size: contain;
+    /*position: absolute;*/
+    text-align: center;
+    align-content: center;
+}
+
+.content {
+    font-size: 15px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding-top: 20px;
+    color: #191919;
+    font-weight: 400;
+    text-align: left;
+}
+
+b {
+    font-weight: 900;
+}
+
+/* CSS for the opel graph. */
+.y.axis line {
+    fill: none;
+}
+
+.x.axis line {
+    fill: none;
+    stroke: #e0e0e0;
+    shape-rendering: crispEdges;
+}
+
+.axis path {
+    display: none;
+}
+
+.brush .extent {
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+}
+
+.resize {
+    display: inline !important; /* show when empty */
+    fill: #7A7A7A;
+    fill-opacity: 1;
+    stroke: #7A7A7A;
+    stroke-width: 2px;
+}
+
+/* CSS for the bubble. */
+circle.node {
+    cursor: pointer;
+    stroke: #000;
+    stroke-width: .5px;
+}
+
+line.link {
+    fill: none;
+    /* stroke: #9ecae1; */
+    stroke: #9ecae1;
+    stroke-width: 1.5px;
+}
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+/* CSS for the small multiples*/
+
+.bar--positive {
+    fill: url('#positiveGradient');
+}
+
+.bar--negative {
+
+    fill: url('#negativeGradient');
+}
+
+
+.bar:hover {
+    fill: #bcbcbc ;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #efefef;
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path {
+    stroke-width: 0;
+}

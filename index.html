@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>The NHS in Crisis</title>
+    <link rel="icon" href="/img/nhs-favicon.png">
+    <meta property="og:url"           content="http://markneumann.xyz/visualessays/savethenhs/index.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="The NHS in Crisis" />
+    <meta property="og:description"   content="A visual essay on the funding crisis affecting the National
+                                               health service in the UK. " />
+    <meta property="og:image"         content="http://markneumann.xyz/visualessays/savethenhs/img/summary.png" />
+    <meta property="og:image:width"   content="1130" />
+    <meta property="og:image:height"  content="644" />
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="js/d3pie.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=498429873701491";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="title">The</div>
+<img id="nhs-logo" src="img/nhs-logo.svg">
+<div class="title"> is in a period of Crisis.</div>
+<div class="content">
+    <p>
+        <b>
+            The NHS is under a period of significant, sustained stress. This visual essay aims to address some of the
+            mis-truths surrounding NHS spending and performance. Particularly, we'll explore hospital occupancy,
+            waiting times, and some of the reasons behind why it is taking increasingly longer to leave hospital.
+            We'll see why this is linked to government policy and spending on social care and how that is
+            affecting the National Health Service. Finally we'll look at the Winter 2017 crisis and why it's more
+            important than ever to make your voice heard now.
+        </b>
+    </p>
+    <div class="heading">Government Funding and NHS Trusts</div>
+</div>
+    <div id="pieChart" style="justify-content: space-between; display: flex; margin-bottom: -170px;">
+        <script src="js/pie_chart.js" type="text/javascript"></script>
+    </div>
+<div class="content">
+    <div class="explanation">
+        Source:
+        <a href="https://www.kingsfund.org.uk/publications/deficits-nhs-2016" target="_blank">
+            NHS Trusts in Surplus/Deficit 2016, The King's Fund
+        </a></div>
+    <p>
+        Firstly, you may be wondering what all the fuss is about. Aren't the government
+        <a href="https://www.gov.uk/government/news/department-of-healths-settlement-at-the-spending-review-2015" target="_blank">
+            increasing spending on the NHS
+        </a>
+        by over 10 billion pounds? This may be the case on the surface, except <b> for the 2015/16 spending review,
+        the definition of spending on the NHS has changed substantially.</b> For the 2015/16 spending review,
+        percentage change in budgets is described in terms of the budget for NHS England, rather than the budget
+        for the Department of Health. This isn't just bad policy - it's bad statistics leveraged for political
+        advantage.
+    <p>
+        Spending on national bodies, such as the Care Quality Commission, or the
+        National Institute for Health and Care Excellence is no longer included. NHS England's budget was £101.3
+        billion in 2015/16, compared to the Department of Health's total budget, of £116.4 billion. It is much easier
+        to describe an increase in funding if change what you are measuring against.
+    </p>
+    <p>
+        If we measure the increase in terms of the total Department for Health budget, the increase in spending is only
+        <a href="https://www.kingsfund.org.uk/publications/briefings-and-responses/spending-review-health-social-care"
+           target="_blank">
+            £4.5 billion pounds
+        </a>
+        over the course of this parliament (until 2021), under half of what the government originally
+        stated. This massive difference is due to cuts in funding to other parts of the Department for Health budget,
+        which fall outside of the remit of NHS England, which means these cuts aren't included in the new total.
+    </p>
+    <p>
+        Secondly, you may have noticed that the government only discusses the funding changes to the NHS budget in absolute
+        terms, rather than percentage increases or decreases. This is because even £4.5 billion pounds sounds like a
+        very large quantity of money - what couldn't be achieved with 4.5 billion pounds? However, if we compare
+        this funding increase relative to previous years, it equates to a 0.9% increase per year until 2021, which is the
+        same rate of increase as over the previous 4 years.
+    </p>
+
+    <p>
+        Now, let's look at some performance measures of how hospitals are coping with the systemic lack of funding.
+    </p>
+
+</div>
+<div class="content">
+    <div class="heading">Available beds</div>
+    At a time in which the NHS should be receiving more funding due to our rapidly ageing population,
+    the government is actually slowing funding. Use the chart below to see what the average bed occupancy
+    in Q2 2016 (most recent available data) was in the hospital trust serving your region. 85% occupancy is
+    generally <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC28163/" target="_blank">
+    considered to be the safe benchmark</a>, beyond which the lack of beds begins to <a href="https://www.nuffieldtrust.
+    org.uk/files/2017-01/winter-beds-pressures-final.pdf" target="_blank">affect clinical outcomes</a>.
+    The below graph shows the number of percentage points above or below 85% capacity a hospital trust is. The reason
+    for this is simply that of anticipating demand. Hospitals have to be able to cope with sudden influxes of patients
+    during natural disasters, or lower level disruption such as multi-vehicle traffic accidents.
+    You'll note that over half of them are over-capacity, with several having close to no available beds.
+
+    <div class="explanation">Scroll to find your local NHS trust. Use the slider window
+    on the right to compare more trusts.</div>
+    <div id="chart"></div>
+    <div class="explanation">Source: <a href="https://www.england.nhs.uk/statistics/statistical-work-areas/bed-availability
+        -and-occupancy/bed-data-overnight/" target="_blank"> Bed availability and occupancy, NHS England</a></div>
+
+    <div class="heading">The NHS and Social Care</div>
+    <p>
+        In order to understand why our hospitals are filling up, we need to dig into the underlying causes of the
+        delays in people leaving hospital. One reason is that the United Kingdom has an ageing population - between
+        2015 to 2020, <a href="https://www.parliament.uk/business/publications/research/key-issues-parliament-2015/
+        social-change/ageing-population/" target="_blank">the overall UK population is expected to increase by 3%</a>
+        , but the percentage of over 65s is expected to rise by 12% and the percentage of over 85s by 18%. As expected,
+        older people tend to require more care, so this is a period in history when it would be natural to expand public
+        healthcare. However, the healthcare of older people is often tied into social care, as often, they have medical
+        needs which are ongoing, but can be addressed outside of a hospital.
+    </p>
+    <p>
+        In terms of funding social care, here's where things get a bit more complicated; it's local councils which
+        have the responsibility to provide care on a local level. In some respects this is a reasonable idea - different
+        parts of the UK have different age demographics and will hence need very different levels, or types, of social
+        care. However, this can lead to a
+        <a href="https://www.theguardian.com/society/2016/sep/08/postcode-lottery-revealed-in-nhs-care" target="_blank">
+            Postcode Lottery effect</a>, where levels of care differ substantially across the country.
+    </p>
+    <p>
+        In the 2015 Autumn Statement, George Osborne introduced a council tax "precept" of 2%, which local councils
+        levy against their constituencies in order to address the crisis in social care provision.
+        This winter, Sajid Javid recognised the fact that this gap in social care funding was not going to be easily
+        addressed and
+        <a href="https://www.gov.uk/government/news/dedicated-adult-social-care-funding-forms-key-part-of-continued-
+        long-term-funding-certainty-for-councils" target="_blank">
+            raised the maximum value of this precept </a> to 3% for 2017/18. However, the value raised from this
+        precept cannot rise over 6% over 3 years, meaning that if the full amount was raised for both 2017 and 2018,
+        no precept would be levied in 2019. The government has estimated that this precept will raise £2 billion
+        of extra funding until 2020 - however, this appears to have been massively overvalued, with the amount raised in
+        2016 being only £382 million. This amounts to just under 2/3rds of the new £600m cost in increased wages of
+        implementing the National Living Wage in the social care sector in 2016. I urge you to follow the above link -
+        government announcements such as this are so difficult to interpret because when concrete funding is discussed,
+        it is only done so in relative terms. This is not just bad policy, it is bad statistics; the actions of a
+        government hiding the truth from the electorate.
+    </p>
+    <p>
+        Additionally, this spending pales in comparison to the cuts to local government funding by the previous coalition
+        government and the current Conservative government. Council funding from central government is set to fall by
+        56% by 2020, on top of a reduction of 37% over the course of the last government. Considering that social
+        care is one of the largest financial responsibilities of local councils, the idea that these severe budget
+        changes can be absorbed without affecting social care shows an unacceptable naivety in government policy.
+    </p>
+
+</div>
+
+<div id="transfers"></div>
+<div class="explanation">
+    Source:
+    <a href="https://www.england.nhs.uk/statistics/statistical-work-areas/delayed-transfers-of-care/2016-17-data/"
+    target="_blank">Delayed Transfers of Care, 2016-17, NHS England</a> Monthly data.
+</div>
+
+<div class="content">
+
+    <p>
+        Take a look a the graph above - you will notice a dramatic leap in the numbers of patients waiting for placement
+        in a nursing home or awaiting a care package in their own home. Note that this changes are statistically
+        significant - both of these categories have more than doubled since 2014, whereas the total number of NHS
+        inpatients has risen by 9% over the same period.
+    </p>
+
+    <p>
+        Finally, it's worth noting that this stop-gap method of funding social care on a local level isn't particularly
+        comforting for a Department of Health whose primary objective regarding healthcare provision is the integration of
+        NHS provided services with social care. While social care is provided on a local level, surely tight
+        integration with the National Health Service is going to be tricky, given the different timescales and
+        objectives of the respective funding bodies?
+    </p>
+    <div class="heading">Winter 2017: Streched to Breaking Point</div>
+    The National Health Service manages times of pressure using the Operational Pressures Escalation Framework,
+    which is designed to ensure patient safety, define a national standard for escalation, triggers and protocol
+    and set expectations for the responsibilities during such times of pressure.
+    <br>
+    OPEF has 4 levels, where OPEF1 represents a hospital working efficiently under normal conditions and OPEF4
+    indicates that hospitals and other organisations within the trust are unable to provide a comprehensive level
+    of care. Below are the full definitions of OPEF3 and 4:
+
+    <p>
+        <i>
+            <b>Level 3:</b>
+            "The local health and social care system is experiencing major pressures compromising patient
+            flow and continues to increase. Actions taken in OPEL 2 have not succeeded in returning the
+            system to OPEL 1. Further urgent actions are now required across the system by all A&E
+            Delivery Board partners, and increased external support may be required. Regional teams in
+            NHS E and NHS I will be aware of rising system pressure, providing additional support as
+            deemed appropriate and agreed locally. National team will also be informed by DCO/Subregional
+            teams through internal reporting mechanisms."
+
+        </i>
+    </p>
+
+    <p>
+        <i>
+            <b>Level 4:</b>
+            "Pressure in the local health and social care system continues to escalate leaving organisations
+            unable to deliver comprehensive care. There is increased potential for patient care and safety
+            to be compromised. Decisive action must be taken by the Local A&E Delivery Board to recover
+            capacity and ensure patient safety. All available local escalation actions taken, external
+            extensive support and intervention required. Regional teams in NHS E and NHS I will be aware
+            of rising system pressure, providing additional support as deemed appropriate and agreed
+            locally, and will be actively involved in conversations with the system.Where multiple systems
+            in different parts of the country are declaring OPEL 4 for sustained periods of time and there is
+            an impact across local and regional boundaries, national action may be considered."
+        </i>
+    </p>
+    <br>
+
+    Below, you can see the daily average number of hospitals in each commisioning region which were at an OPEF level
+    of 3 or 4 during December and January.
+</div>
+<div id="small-multiples"></div>
+<div class="content">
+    <div class="explanation"> Source: <a href="https://www.england.nhs.uk/statistics/statistical-work-areas/
+    winter-daily-sitreps/winter-daily-sitrep-2016-17-data/" target="_blank"> Daily Winter Sit-Reps, NHS England</a>.
+    Note that no data is available for 14-15th Jan, so the week beginning 13th Jan is an average over 5 days, rather
+    than a full week. Also, this data is not comparable to previous years, as the government re-defined
+    the way hospitals report operational pressures from "Serious Operational Issues" to the new OPEF framework. </div>
+    <p>
+
+    </p>
+
+    <div>
+        It's clear that the National Health Service is coming under increasing pressure and performance is
+        suffering. Finally, we should take into account the debilitating conditions that NHS staff are increasingly
+        finding themselves working under - public health is not the only cost of a stretched NHS.
+    </div>
+
+    <div class="title"> Say <i>Something.</i></div>
+
+    The NHS is in crisis and it is important you make your voice heard. Below are some actions you can take now
+    to begin that process.
+    <p>
+        <b>Write to your MP using <a href="https://www.writetothem.com/" target="_blank">Write to Them</a>.</b>
+        Hopefully this blog post has given you enough information to construct your own argument
+        when writing to an MP. Your letter will be much more effective if you write it in your own words
+        and make it relevant to your constituency.
+    </p>
+
+    <p>
+        <b>Find out how you can get involved in local activism</b> with
+        <a href="http://keepournhspublic.com/" target="_blank">Keep our NHS Public</a>. They have several local
+        groups, as well as an informative website where you can keep up-to-date with UK wide events, such as the
+        <a href="http://www.ournhs.info/" target="_blank">Our NHS March on Parliment Square</a> on 4th March 2017.
+        Consider donating if you are able.
+
+    </p>
+
+    <p>
+        <b>Share this post</b>, to inform people of the facts surrounding NHS funding and counter some of the
+        mis-information distributed by the Jeremy Hunt and the Conservative Government.
+    </p>
+
+    <p>
+        Remember that the argument that privatisation brings efficiency to public services only holds true to
+        a certain extent. Certainly the NHS can become more efficient, but remember that it's very hard to put a value
+        on your health, which makes it a market ripe for exploitation. In 2015, we spent 8.5% of our GDP on health
+        spending; in the USA, that figure is 16.5% and there, you have to pay when you get an ambulance.
+        So the next time you see a doctor, or a nurse, or anyone involved with our National Health Service:
+        tell them they are doing a great job and that you appreciate the work they are doing, especially under times
+        of exceptional stress. It's important that you make your voice heard now, when there is still the possibility
+        that the damage done can be reversed. In today's politics more than ever, apathy is not an option.
+    </p>
+
+
+</div>
+<div style="margin: 0 auto; width: 390px; justify-content: space-between; display: flex;">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="The NHS in Crisis:"
+       data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <div class="fb-share-button" data-href="http://markneumann.xyz/savethenhs" data-layout="button_count"
+         data-size="large" data-mobile-iframe="true">
+        <a class="fb-xfbml-parse-ignore" target="_blank"
+           href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmarkneumann.xyz%2Fsavethenhs&amp;
+               src=sdkpreparse">Share</a>
+    </div>
+</div>
+<div class="explanation" style="font-size: 18px">
+    <p>
+
+    </p>
+    A Visual Essay by
+    <a href="http://markneumann.xyz/" target="_blank">
+        Mark Neumann.
+    </a>
+    <p>
+
+    </p>
+
+</div>
+
+
+
+<img id="campbell" src="img/campbell_depression.jpg-large" width="620" align="center">
+
+<script src="js/quarter_line_graph.js" type="text/javascript">
+</script>
+<script src="js/opel_graph.js" type="text/javascript">
+</script>
+<script src="js/background_line.js" type="text/javascript">
+</script>
+<script src="js/small_multiples.js" type="text/javascript">
+</script>
+
+<div class="explanation">
+    Acknowledgements: Mike Bostock, for creating the excellent D3.js library and Nadieh Bremer, for the scrollable
+    bar template. Thanks to Chris Loy and Greg Saunders for feedback and comments.
+</div>
+</body>
